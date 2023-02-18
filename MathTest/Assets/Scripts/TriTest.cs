@@ -7,6 +7,8 @@ public class TriTest : MonoBehaviour
     public GameObject _start;
     public GameObject _end;
 
+    public GameObject _pivot, _movesphere;
+
     void Start()
     {
         
@@ -19,11 +21,11 @@ public class TriTest : MonoBehaviour
         Vector3 endPos = _end.transform.position;
 
         Vector3 dir = endPos - startPos;
-        Vector3 mousePos = Input.mousePosition;
+        Vector3 pivotPos = _pivot.transform.position;
 
         dir = dir.normalized;
-        float dot = Vector3.Dot(dir, mousePos);
+        float dot = Vector3.Dot(dir, pivotPos);
 
-        transform.position = startPos + dir * dot; 
+        _movesphere.transform.position = startPos + dir * dot; 
     }
 }

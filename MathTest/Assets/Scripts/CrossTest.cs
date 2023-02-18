@@ -33,6 +33,13 @@ public class CrossTest : MonoBehaviour
         Vector3 sXm = Vector3.Cross(ptos, ptom);
         Vector3 eXm = Vector3.Cross(ptom, ptoe);
 
+        Vector4 testpos = new Vector4(10, 10, 10, 1);
+        //Matrix4x4 testScale = new Matrix4x4(new Vector4(1, 0, 0, 0), new Vector4(0, 1, 0, 0), new Vector4(0, 0, 0, 1), new Vector4(0, 0, 0, 1));
+
+        //testpos *= testScale;
+
+
+
         if (sXm.z >= 0 && eXm.z >= 0)
         {
             Debug.Log(sXm);
